@@ -23,7 +23,7 @@ class Weather extends PureComponent {
         <LinearGradient 
           start={{x: 0, y: 0}} 
           end={{x: 1, y: 0}} 
-          colors={['#00B0FF', '#00B0FF']} 
+          colors={['#E1F5FE', '#E1F5FE']} 
           style={styles.headerContainer}>
 
           <Text style={styles.text}> Sunny </Text>
@@ -32,8 +32,8 @@ class Weather extends PureComponent {
         {/* </View> */}
 
         <View style={styles.bodyContainer}>
-          <Text style={styles.text}> Weather List goes here.  </Text>
-          <Text style={{fontFamily: Fonts.OpenSans}}> Sample text goes here </Text>
+          {/* <Text style={styles.text}> Weather List goes here.  </Text>
+          <Text style={{fontFamily: Fonts.OpenSans}}> Sample text goes here </Text> */}
 
           {/* FlatList goes here */}
           <ProvinceWeatherList />
@@ -68,14 +68,16 @@ const styles = StyleSheet.create({
   bodyContainer: {
     flex:2.5,
     // height: 500, 
-    marginTop: '40%',
+    marginTop: '35%',
     zIndex: 1,
     backgroundColor: 'white',
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
-    paddingTop: '8%',
-    paddingLeft: '8%',
-    paddingRight: '8%',
+    backgroundColor: '#F5F5F5',
+
+    // paddingTop: '6%',
+    // paddingLeft: '6%',
+    // paddingRight: '6%',
     elevation: 10
 
   },
