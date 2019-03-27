@@ -1,4 +1,4 @@
-export default function weatherListReducer(
+export default function weatherListReducer (
   state = {},
   action
 ) {
