@@ -3,8 +3,10 @@ import React, { PureComponent } from 'react';
 import { View, FlatList, Text, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 // import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import Icon from '../utils/weatherIcon';
 
+import { getGradientColors, getWeatherColors, getWeatherIcons } from '../utils/functions/util';
 import { Fonts } from '../utils/fonts';
 
 
@@ -46,56 +48,10 @@ class ProvinceWeatherList extends PureComponent {
 }
 
 export default ProvinceWeatherList;
-  
-const getGradientColors = (weather) => {
-  switch(weather) {
-    case 'Cloudy':
-      return ['#616161', '#9E9E9E', '#78909C'];
-    case 'Partly Cloud':
-      return ['#607D8B', '#90A4AE', '#81D4FA'];
-    case 'Sunny':
-      return ['#FFA000', '#FDD835', '#81D4FA'];
-    case 'Rainny':
-      return ['#039BE5', '#81D4FA', '#90A4AE'];
-    case 'Storm':
-      return ['#616161', '#90A4AE', '#FDD835'];
-    default: 
-      return ['#039BE5', '#29B6F6', '#81D4FA'];
-  }
-};
-const getWeatherIcons = (weather) => {
-  switch(weather) {
-    case 'Cloudy':
-      return 'wi-cloudy';
-    case 'Partly Cloud':
-      return 'wi-day-cloudy';
-    case 'Sunny':
-      return 'wi-day-sunny';
-    case 'Rainny':
-      return 'wi-rain';
-    case 'Storm':
-      return 'wi-storm-showers';
-    default: 
-      return 'wi-cloud';
-  }
-};
-const getWeatherColors = (weather) => {
-    switch(weather) {
-      case 'Cloudy':
-        return '#616161';
-      case 'Partly Cloud':
-        return '#607D8B';
-      case 'Sunny':
-        return '#FFA000';
-      case 'Rainny':
-        return '#039BE5';
-      default: 
-        return '#039BE5';
-  };
-};
 
 const renderFirstRecord = (item) => {
-  return(
+
+  return (
     <View style={styles.initialCard}>
       <Text style={{flex:1, fontFamily:Fonts.OpenSansBold, fontSize: 23, paddingTop:20, color: 'black'}}>Weather</Text>
 
@@ -104,7 +60,7 @@ const renderFirstRecord = (item) => {
       end={{x: 1, y: 0}} 
       colors={['white', 'white']} 
       style={styles.initialCardItem}>
-      {/* <View style={styles.initialCardItem}> */}
+
         <View style={{flex:0.4, flexDirection: 'row', borderWidth:0}}>
           <View style={{flex:1, alignItems: 'center', justifyContent: 'flex-end'}}>
             <Text style={{color:'#424242', fontFamily: Fonts.OpenSans, fontSize: 15}}>{item.location}</Text>
@@ -126,7 +82,7 @@ const renderFirstRecord = (item) => {
             </View>
           </View>
         </View>
-      {/* </View> */}
+
       </LinearGradient>
 
     </View>
@@ -179,7 +135,7 @@ const styles = StyleSheet.create({
     height: 150,
     width: 330,
     marginBottom: 40,
-    marginTop: 25,
+    marginTop: 20,
     marginLeft: 10,
     marginRight: 10,
     borderRadius: 15,
