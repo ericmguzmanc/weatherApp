@@ -17,10 +17,10 @@ class Weather extends PureComponent {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <StatusBar backgroundColor="#0081cb"/>
+        {/* <StatusBar backgroundColor="#0081cb"/> */}
         {/* <View style={styles.headerContainer} > */}
           {/* <Headline style={{fontFamily: Fonts.OpenSans}}>Weather</Headline> */}
-        <LinearGradient 
+        {/* <LinearGradient 
           start={{x: 0, y: 0}} 
           end={{x: 1, y: 0}} 
           colors={['#E1F5FE', '#E1F5FE']} 
@@ -28,7 +28,7 @@ class Weather extends PureComponent {
 
           <Text style={styles.text}> Sunny </Text>
 
-        </LinearGradient>
+        </LinearGradient> */}
         {/* </View> */}
 
         <View style={styles.bodyContainer}>
@@ -54,31 +54,30 @@ export default Weather;
 const styles = StyleSheet.create({
   mainContainer: {
     flex:1,
-    backgroundColor: 'lightgray',
-    // height: 200
+    backgroundColor: 'white',
+    // height: 200,
   },
   headerContainer: {
     flex:1.2,
     height: '80%',
     width: '100%',
-    position: 'absolute',
-    backgroundColor: '#00b0ff',
-    zIndex: 0,
+    // position: 'absolute',
+    // zIndex: 0,
+    
   },
   bodyContainer: {
     flex:2.5,
     // height: 500, 
-    marginTop: '35%',
-    zIndex: 1,
-    backgroundColor: 'white',
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
-    backgroundColor: '#F5F5F5',
-
-    // paddingTop: '6%',
-    // paddingLeft: '6%',
-    // paddingRight: '6%',
-    elevation: 10
+    // marginTop: '35%',
+    // zIndex: 1,
+    // backgroundColor: 'white',
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    // backgroundColor: '#F5F5F5',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // elevation: 10,
+    // borderWidth: 1
 
   },
   text: {
