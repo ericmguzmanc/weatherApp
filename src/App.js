@@ -1,14 +1,17 @@
 
 
 import React, {Component} from 'react';
-import { View, StatusBar } from 'react-native';
+import { Provider } from 'react-redux'; 
 
 import Navigation from './components/Navigation';
+import store from './store/index';
 
 export default class App extends Component {
   render() {
     return (
-      <Navigation />
+      <Provider store={store}>
+        <Navigation />
+      </Provider>
     );
   }
 }

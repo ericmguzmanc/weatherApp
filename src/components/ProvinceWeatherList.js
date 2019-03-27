@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react';
 
 import { View, FlatList, Text, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-// import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Icon from '../utils/weatherIcon';
-
 import { getGradientColors, getWeatherColors, getWeatherIcons } from '../utils/functions/util';
 import { Fonts } from '../utils/fonts';
+
+import WeatherService from '../utils/services/weather-service';
 
 
 const mockedWeather = [
@@ -23,6 +23,10 @@ const mockedWeather = [
 
 class ProvinceWeatherList extends PureComponent {
 
+  componentDidMount() {
+    
+  }
+
 
   WeatherCard = (item) => {
     return (
@@ -33,7 +37,6 @@ class ProvinceWeatherList extends PureComponent {
   };
 
   render() {
-    console.log('got in flatlist render ', mockedWeather)
     return (
       <View style={styles.flatListContainer}>
         <FlatList 
